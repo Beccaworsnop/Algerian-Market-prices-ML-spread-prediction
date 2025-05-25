@@ -1,8 +1,8 @@
-This project analyzes Algerian market price data to predict price spreads between lower and upper bounds, providing insights into market volatility and price variations across different product categories.
+This project analyzes Algerian market price data to predict price relative spreads between lower and upper bounds, providing insights into market volatility and price variations across different product categories.
 
 ## Project Overview
 
-The Algerian Market Price Spread Prediction project implements a data science workflow to analyze and predict price spreads in the Algerian market. The project covers:
+The Algerian Market Price relative Spread Prediction project implements a data science workflow to analyze and predict price relative spreads in the Algerian market. The project covers:
 
 1. Data Cleaning & Preprocessing
 2. Exploratory Data Analysis (EDA)
@@ -20,13 +20,13 @@ The dataset contains information about various products in the Algerian market w
 - `month`: Month when the price data was collected
 - `spread`: Calculated price spread (target variable)
 
-The spread is defined as: `(upperBound - lowerBound) / lowerBound` and represents the relative price range for each product.
+The relative spread is defined as: `(upperBound - lowerBound) / lowerBound` and represents the relative price range for each product.
 
 ## Workflow
 
 ### 1. Data Cleaning
 
-- Calculated the spread between upper and lower price bounds
+- Calculated the relative spread between upper and lower price bounds
 - Handled infinity values that resulted from division operations
 - Removed or replaced NaN values to ensure data quality
 - Verified data cleanliness with statistical checks
@@ -38,7 +38,7 @@ The spread is defined as: `(upperBound - lowerBound) / lowerBound` and represent
 
 ### 3. Model Development
 
-We implemented a **Random Forest Regressor** to predict price spreads with the following specifications:
+We implemented a **Random Forest Regressor** to predict price relative spreads with the following specifications:
 - 100 decision trees (`n_estimators=100`)
 - Standard train-test split (80% training, 20% testing)
 - Categorical features encoded using pandas `get_dummies` functionality
@@ -50,17 +50,17 @@ The model was evaluated using multiple metrics:
 - R² Score (coefficient of determination)
 
 Additionally, visualizations were created to assess:
-- Actual vs Predicted spread values
-- Feature importance analysis to identify key factors influencing price spread
+- Actual vs Predicted relative spread values
+- Feature importance analysis to identify key factors influencing price relative spread
 
 ## Key Insights
 
-- The model effectively captures the relationship between product attributes and price spreads
+- The model effectively captures the relationship between product attributes and price for relative spreads
 - Important features determining price spread were identified through feature importance analysis
 - The approach handles the challenges of working with financial market data, including outliers and variable relationships
 
 
 ## Conclusion
 
-The Random Forest Regression model provides valuable insights for understanding and predicting price spreads in the Algerian market. This information could be useful for market analysts, retailers, and consumers seeking to understand price volatility and make informed decisions
+The Random Forest Regression model provides valuable insights for understanding and predicting price for relative spreads in the Algerian market. This information could be useful for market analysts, retailers, and consumers seeking to understand price volatility and make informed decisions
 This was my first ML project so i will appreciate any guidance, an article will be coming soon about my research ;)
